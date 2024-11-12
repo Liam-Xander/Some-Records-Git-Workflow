@@ -36,8 +36,9 @@
      ```bash
      git push origin v14.2
      ```
-
-6. **删除本地标签**
+   - 这样，你的最新代码和标签都将被上传到远程仓库。
+     
+**删除本地标签**
    - 如果需要，可以在本地删除标签：
      ```bash
      git tag -d v8.0
@@ -45,21 +46,19 @@
 
 ---
 
-## 初始化新仓库并上传文件
+## 进入想要上传一个新文件夹的终端下
 
 1. **新建并初始化仓库**
    ```bash
    git init
    ```
 
-2. **添加文件夹内的所有文件到仓库**
-   - 如果缺少某些文件，可以使用 `git add 文件名` 添加单个文件：
+2. **将文件夹内的所有文件都添加到仓库中，如果缺少哪个，可以使用 git add XXXX 添加；**
      ```bash
      git add .
      ```
 
-3. **提交文件到本地仓库**
-   - `-m` 后输入提交说明：
+3. **上传文件至本地仓库， -m之后的输入是本次提交的说明。**
      ```bash
      git commit -m "first commit"
      ```
@@ -69,13 +68,15 @@
    git branch -M main
    ```
 
-5. **关联 GitHub 仓库**
-   - 将本地文件夹与 GitHub 仓库关联，后面是 GitHub 仓库地址：
+5. **关联 GitHub 仓库,将本地文件夹和github仓库关联，后面是自己之前新建的github仓库地址**
      ```bash
-     git remote add origin https://ghp_令牌@github.com/Liam-Xander/RMM-FUEL.git
+     git remote add origin https://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@github.com/Liam-Xander/RMM-FUEL.git
+     git remote add origin https://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@github.com/Liam-Xander/predict_based_rmmfastplanner.git
      ```
 
-   - 如果出现 `fatal: 远程 origin 已经存在` 错误，可以移除已有的 `origin`：
+   - 其中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是令牌，@github.com/Liam-Xander/Multi-Fast.git是上传仓库
+
+   - 如果出现fatal:远程origin已经存在则
      ```bash
      git remote remove origin
      ```
@@ -85,19 +86,35 @@
      ```bash
      git push -u origin main
      ```
+   - 如果执行这句命令出现：fatal: 无法读取远程仓库   就再执行一遍
+     ```bash
+      git remote add origin https://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@github.com/Liam-Xander/RMM-FastPlanner.git
+     ```
+   - 然后
+      ```bash
+     git remote remove origin
+     ```
+   - 就行了。
 
 ---
 
 ## 添加文件方案
 
-- **添加文件夹：**
+- **如果像我一样需要添加文件夹，输入：**
   ```bash
   git add /home/lxyu/fastplanner_ws/src/Fast-Planner/README2.md
   ```
+- **后面为需要的文件夹路径**
 
-- **提交文件并推送：**
   ```bash
   git commit -m "add another readme"
+  git branch -M main
+  git remote add origin https://Liam-Xander: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@github.com/Liam-Xander/Multi-Fast.git
+  ```
+  
+- **如果输出fatal:远程origin已经存在，这会是添加文件，就不需要git remote remove origin了直接下面：**
+
+  ```bash
   git push -u origin main
   ```
 
@@ -106,24 +123,33 @@
 ## 更新文件方案
 
 1. **拉取远程更改：**
-   - 如果提示远程仓库包含未同步的提交，请先拉取远程更新并合并：
+   - 提示：更新被拒绝，因为远程仓库包含您本地尚不存在的提交。这通常是因为另外
+   - 提示：一个仓库已向该引用进行了推送。再次推送前，您可能需要先整合远程变更
+   - 需要从远程仓库拉取最新的更改，并将其与本地分支合并：：
      ```bash
      git pull origin main
      ```
+   - 这一步会将远程仓库的最新改动拉取到本地，并尝试自动合并。如果在这个过程中没有冲突，Git 会自动完成合并。如果有冲突，您需要手动解决冲突。
 
 2. **解决冲突（如果有）：**
-   - 如果有冲突，找到冲突标记（如 `<<<<<<`, `======`, `>>>>>>`），解决后保存并标记解决完成：
+   - 如果 `README.md` 文件有冲突，Git 会提示您手动解决冲突。找到冲突标记（如 `<<<<<<`, `======`, `>>>>>>`），然后编辑冲突文件，保留您想要保留的内容。
+   - 编辑完成后，保存文件并标记冲突已经解决：
      ```bash
      git add README.md
      ```
 
 3. **重新提交并推送：**
-   - 完成合并或解决冲突后，重新提交并推送更新：
+   - 完成合并或解决冲突后，重新提交改动并推送到远程仓库：
      ```bash
      git commit -m "Update README"
      git push origin main
      ```
-
+   - 这样，您就可以将本地的 README.md文件更新推送到 GitHub 上了。
+   - 如果在合并过程中没有冲突，您可以直接进行推送：
+     ```bash
+     git push origin main
+     ```
+   - 这样就可以成功将本地的更改推送到远程仓库。
 ---
 
 ## 更新整个项目
@@ -131,17 +157,36 @@
 1. **添加所有更改并提交：**
    ```bash
    git add .
+   ```
+2. **上传文件至本地仓库， -m之后的输入是本次提交的说明：**
+   ```bash
    git commit -m "fix some problems"
    ```
-
-2. **关联 GitHub 仓库（如未关联）：**
+3. ** **
    ```bash
-   git remote add origin https://ghp_令牌@github.com/Liam-Xander/RMM-FUEL.git
+   git branch -M main
    ```
+4. **将本地文件夹和github仓库关联，后面是自己之前新建的github仓库地址**
+   ```bash
+   git remote add origin https://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@github.com/Liam-Xander/RMM-FUEL.git
+   ```
+   ```bash
+   git remote add origin https://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@github.com/Liam-Xander/RMM-FUEL.git
+   ```
+- 其中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是令牌，@github.com/Liam-Xander/Multi-Fast.git是上传仓库
 
-3. **推送到远程仓库：**
+- 如果fatal:远程origin已经存在则
+     ```bash
+   git remote remove origin
+   ```
+5. ** **
    ```bash
    git push -u origin main
    ```
+- 如果执行这句命令出现：fatal: 无法读取远程仓库   就再执行一遍
+   ```bash
+   git remote add origin https://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@github.com/Liam-Xander/RMM-FastPlanner.git
+   ```
+- 然后git push -u origin main就行了。
 
 ---
