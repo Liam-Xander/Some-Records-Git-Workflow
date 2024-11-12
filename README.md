@@ -70,8 +70,8 @@
 
 5. **关联 GitHub 仓库,将本地文件夹和github仓库关联，后面是自己之前新建的github仓库地址**
      ```bash
-     git remote add origin https://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@github.com/Liam-Xander/RMM-FUEL.git
-     git remote add origin https://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@github.com/Liam-Xander/predict_based_rmmfastplanner.git
+     git remote add origin https://ghp_gaPu2kee4Jlkkkk0hrbedtlllz0YLhqk@github.com/Liam-Xander/RMM-FUEL.git
+     git remote add origin https://ghp_VM08fffFgggFygJNMjD88dkkkk3UjWnH@github.com/Liam-Xander/predict_based_rmmfastplanner.git
      ```
 
    - 其中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是令牌，@github.com/Liam-Xander/Multi-Fast.git是上传仓库
@@ -88,7 +88,7 @@
      ```
    - 如果执行这句命令出现：fatal: 无法读取远程仓库   就再执行一遍
      ```bash
-      git remote add origin https://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@github.com/Liam-Xander/RMM-FastPlanner.git
+      git remote add origin https://ghp_gaPu2kee4hkS780jljldaHBz0YLhqk@github.com/Liam-Xander/RMM-FastPlanner.git
      ```
    - 然后
       ```bash
@@ -109,7 +109,7 @@
   ```bash
   git commit -m "add another readme"
   git branch -M main
-  git remote add origin https://Liam-Xander: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@github.com/Liam-Xander/Multi-Fast.git
+  git remote add origin https://Liam-Xander:ghp_v8NvRjW6SVWOtzkWhlkhklIgsFwD2SQbiz@github.com/Liam-Xander/Multi-Fast.git
   ```
   
 - **如果输出fatal:远程origin已经存在，这会是添加文件，就不需要git remote remove origin了直接下面：**
@@ -168,10 +168,10 @@
    ```
 4. **将本地文件夹和github仓库关联，后面是自己之前新建的github仓库地址**
    ```bash
-   git remote add origin https://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@github.com/Liam-Xander/RMM-FUEL.git
+   git remote add origin https://ghp_gaPu2kee4JwpzS780hgkjgjjk0YLhqk@github.com/Liam-Xander/RMM-FUEL.git
    ```
    ```bash
-   git remote add origin https://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@github.com/Liam-Xander/RMM-FUEL.git
+   git remote add origin https://ghp_gaPu2khlkhwpzS780hrbedt04daHBz0YLhqk@github.com/Liam-Xander/RMM-FUEL.git
    ```
 - 其中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是令牌，@github.com/Liam-Xander/Multi-Fast.git是上传仓库
 
@@ -185,7 +185,7 @@
    ```
 - 如果执行这句命令出现：fatal: 无法读取远程仓库   就再执行一遍
    ```bash
-   git remote add origin https://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@github.com/Liam-Xander/RMM-FastPlanner.git
+   git remote add origin https://ghp_gaPu2kee4JwpzS780hrhlkhlhjlkz0YLhqk@github.com/Liam-Xander/RMM-FastPlanner.git
    ```
 - 然后git push -u origin main就行了。
 
