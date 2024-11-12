@@ -92,7 +92,7 @@
      ```
    - 然后
       ```bash
-     git remote remove origin
+     git push -u origin main
      ```
    - 就行了。
 
