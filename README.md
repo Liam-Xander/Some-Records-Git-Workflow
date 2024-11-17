@@ -43,6 +43,46 @@
      ```bash
      git tag -d v8.0
      ```
+```bash
+/*---------------------------step 1.-----------------------------*/
+(base) lxyu@lxyu-Inspiron-7501:~/rmmfastplanner/src/Fast-Planner$ git push origin main
+To https://github.com/Liam-Xander/predict_based_rmmfastplanner.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: 无法推送一些引用到 'https://密钥@github.com/Liam-Xander/predict_based_rmmfastplanner.git'
+提示：更新被拒绝，因为您当前分支的最新提交落后于其对应的远程分支。
+提示：再次推送前，先与远程变更合并（如 'git pull ...'）。详见
+提示：'git push --help' 中的 'Note about fast-forwards' 小节。
+/*---------------------------step 2.-----------------------------*/
+(base) lxyu@lxyu-Inspiron-7501:~/rmmfastplanner/src/Fast-Planner$ git pull origin main
+remote: Enumerating objects: 14, done.
+remote: Counting objects: 100% (14/14), done.
+remote: Compressing objects: 100% (14/14), done.
+error: RPC failed; curl 18 transfer closed with outstanding read data remaining
+fatal: The remote end hung up unexpectedly
+fatal: early EOF
+fatal: unpack-objects 失败
+/*---------------------------step 3.-----------------------------*/
+(base) lxyu@lxyu-Inspiron-7501:~/rmmfastplanner/src/Fast-Planner$ git config --global http.postBuffer 524288000
+(base) lxyu@lxyu-Inspiron-7501:~/rmmfastplanner/src/Fast-Planner$ git pull origin main
+remote: Enumerating objects: 14, done.
+remote: Counting objects: 100% (14/14), done.
+remote: Compressing objects: 100% (14/14), done.
+remote: Total 14 (delta 5), reused 1 (delta 0), pack-reused 0 (from 0)
+展开对象中: 100% (14/14), 完成.
+来自 https://github.com/Liam-Xander/predict_based_rmmfastplanner
+ * branch            main       -> FETCH_HEAD
+   441f8c5..1143911  main       -> origin/main
+Merge made by the 'recursive' strategy.
+ README.md                | 291 +++-------------------------------------------------------------
+ files/predict.gif        | Bin 0 -> 15577113 bytes
+ files/withoutpredict.gif | Bin 0 -> 19219951 bytes
+ 3 files changed, 11 insertions(+), 280 deletions(-)
+ create mode 100644 files/predict.gif
+ create mode 100644 files/withoutpredict.gif
+
+/*---------------------------step 4.-----------------------------*/
+然后从头开始git add .往后继续就行
+```
 
 ---
 
