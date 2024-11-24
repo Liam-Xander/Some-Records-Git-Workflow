@@ -114,7 +114,7 @@ Merge made by the 'recursive' strategy.
      git remote add origin https://密钥@github.com/Liam-Xander/predict_based_rmmfastplanner.git
      ```
 
-   - 其中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是令牌，@github.com/Liam-Xander/Multi-Fast.git是上传仓库
+   - 其中ghp_**************是令牌，@github.com/Liam-Xander/Multi-Fast.git是上传仓库
 
    - 如果出现fatal:远程origin已经存在则
      ```bash
