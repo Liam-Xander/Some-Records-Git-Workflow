@@ -83,6 +83,29 @@ Merge made by the 'recursive' strategy.
 /*---------------------------step 4.-----------------------------*/
 然后从头开始git add .往后继续就行
 ```
+`or`
+```bash
+(base) lxyu@lxyu-Inspiron-7501:~/rmmfastplanner/src/Fast-Planner$ git push origin main
+To https://github.com/Liam-Xander/predict_based_rmmfastplanner.git
+ ! [rejected]        main -> main (fetch first)
+error: 无法推送一些引用到 'https://ghp_密钥@github.com/Liam-Xander/predict_based_rmmfastplanner.git'
+提示：更新被拒绝，因为远程仓库包含您本地尚不存在的提交。这通常是因为另外
+提示：一个仓库已向该引用进行了推送。再次推送前，您可能需要先整合远程变更
+提示：（如 'git pull ...'）。
+提示：详见 'git push --help' 中的 'Note about fast-forwards' 小节。
+(base) lxyu@lxyu-Inspiron-7501:~/rmmfastplanner/src/Fast-Planner$ git pull --rebase 
+remote: Enumerating objects: 13, done.
+remote: Counting objects: 100% (13/13), done.
+remote: Compressing objects: 100% (13/13), done.
+remote: Total 13 (delta 6), reused 0 (delta 0), pack-reused 0 (from 0)
+展开对象中: 100% (13/13), 完成.
+来自 https://github.com/Liam-Xander/predict_based_rmmfastplanner
+   5e58ebd..55dc62d  main       -> origin/main
+首先，回退分支以便在上面重放您的工作...
+应用：1120stable version record and comment extractSurfacePointsWithBoundary and 200
+
+-----------然后就git push origin main
+```
 
 ---
 
