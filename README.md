@@ -107,6 +107,66 @@ remote: Total 13 (delta 6), reused 0 (delta 0), pack-reused 0 (from 0)
 -----------然后就git push origin main
 ```
 
+
+## 新设备中代码上传到已有仓库中
+### 一、设置 Git 用户名和邮箱（若未设置）
+如果在使用 Git 过程中出现因未设置用户名和邮箱导致的错误，可按如下步骤操作：
+1. **设置全局用户名和邮箱**：
+   运行以下命令来设置你的全局用户名和邮箱（请用你自己的真实信息替换示例中的内容）：
+   ```bash
+   git config --global user.name "Liam-Xander"
+   git config --global user.email "2432485055@qq.com"
+   ```
+2. **检查配置是否生效**：
+   设置后，使用以下命令检查配置是否正确：
+   ```bash
+   git config --global --list
+   ```
+
+### 二、初始化本地 Git 仓库并关联远程仓库（若尚未操作）
+1. 进入你的项目目录：
+   ```bash
+   cd ~/predict/src/Fast-Planner
+   ```
+2. 初始化 Git（如果尚未初始化）：
+   ```bash
+   git init
+   ```
+3. 添加远程仓库：
+   ```bash
+   git remote add origin git@github.com:Liam-Xander/predict_based_rmmfastplanner_GTX1650.git
+   ```
+
+### 三、提交文件到本地仓库
+1. **检查当前仓库的状态**：
+   查看当前仓库的状态，确认是否有更改未提交。
+   ```bash
+   git status
+   ```
+2. **如果没有提交记录，先做一次提交**：
+   - 添加所有文件：
+     ```bash
+     git add.
+     ```
+   - 提交文件并添加提交信息：
+     ```bash
+     git commit -m "1201version on Y9000P"
+     ```
+
+### 四、创建并推送标签
+1. **创建标签**：
+   提交后，就可以创建标签了：
+   ```bash
+   git tag -a Y9000P1.0 -m "1201version on Y9000P"
+   ```
+2. **推送标签到远程仓库**：
+   如果标签创建成功，推送标签到远程仓库：
+   ```bash
+   git push origin Y9000P1.0
+   ```
+
+以上可完成从设置 Git 基本信息、初始化本地仓库并关联远程仓库，到提交文件和创建推送标签的一系列操作。
+
 ---
 
 ## 进入想要上传一个新文件夹的终端下
