@@ -134,7 +134,7 @@ remote: Total 13 (delta 6), reused 0 (delta 0), pack-reused 0 (from 0)
    ```
 3. 添加远程仓库：
    ```bash
-   git remote add origin git@github.com:Liam-Xander/predict_based_rmmfastplanner_GTX1650.git
+   git remote add origin https://密钥@github.com/Liam-Xander/predict_based_rmmfastplanner_GTX1650.git
    ```
 
 ### 三、提交文件到本地仓库
