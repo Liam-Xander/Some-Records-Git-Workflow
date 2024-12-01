@@ -14,9 +14,9 @@
      ```
 
 2. **推送最新代码到远程仓库**
-   - 将提交的最新代码推送到远程仓库对应的分支上，例如 `main` 或 `v7.0`：
+   - 将提交的最新代码推送到远程仓库对应的分支上，例如 `main2` 或 `v7.0`：
      ```bash
-     git push origin main  # 或者 git push origin v7.0
+     git push origin main2  # 或者 git push origin v7.0
      ```
 
 3. **创建带注释的标签**
