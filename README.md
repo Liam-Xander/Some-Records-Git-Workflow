@@ -105,9 +105,53 @@ remote: Total 13 (delta 6), reused 0 (delta 0), pack-reused 0 (from 0)
 应用：1120stable version record and comment extractSurfacePointsWithBoundary and 200
 
 -----------然后就git push origin main
+
 ```
 
+## 创建新分支
 
+1.查看当前分支
+```bash
+git status
+```
+
+2.在当前所在的 `master` 分支基础上创建新分支 `main2`
+
+```bash
+git checkout -b main2
+```
+
+这条命令首先会基于当前的 `master` 分支创建一个名为 `main2` 的新分支，然后自动切换到 `main2` 分支上。之后你就可以在 `main2` 分支上进行代码的修改、添加等操作，完成后记得提交更改并根据需要推送到远程仓库。例如，在 `main2` 分支上完成一些工作后：
+
+3.执行：
+```bash
+git add.
+git commit -m "在 main2 分支上的提交说明"
+git push origin main2
+```
+
+这样就可以将 `main2` 分支的更改推送到远程仓库对应的 `main2` 分支上了（前提是远程仓库已经设置好并且你有相应的推送权限）。 
+
+4. **创建带注释的标签**
+   - 在项目目录（例如 `/predicted_ws/src/Fast-Planner`）下执行以下命令，创建一个带注释的标签：
+     ```bash
+     git tag -a v14.2 -m "全局障碍物不给1，预测版本latest."
+     ```
+
+5. **查看标签**
+   - 确认标签是否已正确创建：
+     ```bash
+     git tag
+     ```
+
+6. **推送标签到远程仓库**
+   - 将标签推送到远程仓库：
+     ```bash
+     git push origin v14.2
+     ```
+   - 这样，你的最新代码和标签都将被上传到远程仓库。
+
+     
 ## 新设备中代码上传到已有仓库中
 ### 一、设置 Git 用户名和邮箱（若未设置）
 如果在使用 Git 过程中出现因未设置用户名和邮箱导致的错误，可按如下步骤操作：
