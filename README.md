@@ -357,3 +357,45 @@ git push origin main2
 - 然后git push -u origin main就行了。
 
 ---
+
+
+## 以前仓库添加新分支
+```bash
+git init
+git add .
+nhy@LAPTOP-C24LBKAL:~/fuel_predict/src/RMM-FUEL$ git branch
+* master
+nhy@LAPTOP-C24LBKAL:~/fuel_predict/src/RMM-FUEL$ ^C
+nhy@LAPTOP-C24LBKAL:~/fuel_predict/src/RMM-FUEL$ ^C
+nhy@LAPTOP-C24LBKAL:~/fuel_predict/src/RMM-FUEL$ git branch main2
+nhy@LAPTOP-C24LBKAL:~/fuel_predict/src/RMM-FUEL$ git branch
+  main2
+* master
+
+nhy@LAPTOP-C24LBKAL:~/fuel_predict/src/RMM-FUEL$ git checkout main2
+Switched to branch 'main2'
+nhy@LAPTOP-C24LBKAL:~/fuel_predict/src/RMM-FUEL$ git branch              * main2
+  master
+
+nhy@LAPTOP-C24LBKAL:~/fuel_predict/src/RMM-FUEL$ git commit -m "1210 commit"
+On branch main2
+nothing to commit, working tree clean
+
+nhy@LAPTOP-C24LBKAL:~/fuel_predict/src/RMM-FUEL$ git remote add origin https://密钥@github.com/Liam-Xander/RMM-FUEL.git
+
+nhy@LAPTOP-C24LBKAL:~/fuel_predict/src/RMM-FUEL$ git push -u origin main2
+Enumerating objects: 1530, done.
+Counting objects: 100% (1530/1530), done.
+Delta compression using up to 32 threads
+Compressing objects: 100% (1433/1433), done.
+Writing objects: 100% (1530/1530), 69.94 MiB | 4.32 MiB/s, done.
+Total 1530 (delta 482), reused 0 (delta 0)
+remote: Resolving deltas: 100% (482/482), done.
+remote:
+remote: Create a pull request for 'main2' on GitHub by visiting:
+remote:      https://github.com/Liam-Xander/RMM-FUEL/pull/new/main2
+remote:
+To https://github.com/Liam-Xander/RMM-FUEL.git
+ * [new branch]      main2 -> main2
+Branch 'main2' set up to track remote branch 'main2' from 'origin'.
+```
