@@ -253,7 +253,9 @@ git push origin main2
      ```bash
      git push -u origin main
      ```
-   - 如果执行这句命令出现：fatal: 无法读取远程仓库   就再执行一遍
+   - 如果执行这句命令出现：fatal: 无法读取远程仓库
+   - 第一种方式：多换几个热点，重新尝试就行
+   - 第二种方式：就再执行一遍
      ```bash
       git remote add origin https://密钥@github.com/Liam-Xander/RMM-FastPlanner.git
      ```
