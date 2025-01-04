@@ -187,10 +187,27 @@ git push origin main2
    ```bash
    git status
    ```
-2. **如果没有提交记录，先做一次提交**：
+
+   查看本地分支
+      ```bash
+      git branch
+      ```
+这个命令会列出所有本地的分支，并且当前所在的分支会有一个 * 标记。
+
+
+要切换到名为 main2 的分支，您可以使用以下命令：
+ ```bash
+git checkout main3
+ ```
+如果 main2 分支还没有被创建，您可以先创建该分支并切换到它：
+ ```bash
+git checkout -b main3
+ ```
+
+3. **如果没有提交记录，先做一次提交**：
    - 添加所有文件：
      ```bash
-     git add.
+     git add .
      ```
    - 提交文件并添加提交信息：
      ```bash
