@@ -110,6 +110,8 @@ remote: Total 13 (delta 6), reused 0 (delta 0), pack-reused 0 (from 0)
 
 
 ---------------------------------------
+## 解决wsl2中无法上传github的问题
+
       ```bash
       wsl --shutdown 
       wsl --list --running # 确保wsl完全关闭
