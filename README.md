@@ -147,13 +147,17 @@ remote: Total 13 (delta 6), reused 0 (delta 0), pack-reused 0 (from 0)
 
 如果ping成功了，但是还是卡住
 尝试先压缩
+
       ```bash
       git gc --aggressive
       ```
+      
 然后
+
       ```bash
       git push -u origin main
       ```
+      
 ---------------------------------------------
 
 
