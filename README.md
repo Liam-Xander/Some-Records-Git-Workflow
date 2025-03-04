@@ -109,7 +109,7 @@ remote: Total 13 (delta 6), reused 0 (delta 0), pack-reused 0 (from 0)
 ```
 
 
-
+---------------------------------------
       ```bash
       wsl --shutdown 
       wsl --list --running # 确保wsl完全关闭
@@ -154,7 +154,7 @@ remote: Total 13 (delta 6), reused 0 (delta 0), pack-reused 0 (from 0)
       ```bash
       git push -u origin main
       ```
-
+---------------------------------------------
 
 
 
