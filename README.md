@@ -108,6 +108,60 @@ remote: Total 13 (delta 6), reused 0 (delta 0), pack-reused 0 (from 0)
 
 ```
 
+
+
+      ```bash
+      wsl --shutdown 
+      wsl --list --running # 确保wsl完全关闭
+      wsl  # 启动
+      
+      
+      nhy@LAPTOP-C24LBKAL:~$ ifconfig
+      eth0: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+              inet 192.168.12.149  netmask 255.255.255.0  broadcast 192.168.12.255
+      
+      nhy@LAPTOP-C24LBKAL:~$ ip route
+      default via 192.168.12.139 dev eth0
+      192.168.12.0/24 dev eth0 proto kernel scope link src 192.168.12.149
+      
+      IP 地址： 192.168.12.149
+      子网： 192.168.12.0/24
+      默认网关： 192.168.12.139
+      ```
+
+1. 测试默认网关连通性
+操作： 执行 ping 192.168.12.139
+目的： 检查是否能与默认网关通信。如果网关无法ping通，说明局域网内部就有连接问题，可能需要检查路由器或网络线缆问题。
+2. 测试外部网络连接
+操作： 如果网关ping通，再尝试 ping 8.8.8.8
+目的： 检查是否可以访问外部网络。如果能够ping通外部IP，则说明网络连接正常；如果依然无法ping通，问题可能出在路由器或ISP连接上。
+
+3.接下来测试域名解析：
+尝试执行如下命令，检查 DNS 是否能正确解析域名：
+
+      ```bash
+      ping github.com
+      nslookup github.com
+      dig github.com
+      ```
+
+如果ping成功了，但是还是卡住
+尝试先压缩
+      ```bash
+      git gc --aggressive
+      ```
+然后
+      ```bash
+      git push -u origin main
+      ```
+
+
+
+
+
+
+
+
 ## 创建新分支
 
 1.查看当前分支
