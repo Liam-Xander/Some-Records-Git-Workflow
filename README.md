@@ -146,6 +146,33 @@ remote: Total 13 (delta 6), reused 0 (delta 0), pack-reused 0 (from 0)
       nslookup github.com
       dig github.com
       ```
+使用 SSH 方式推送，我们需要确保远程仓库的 URL 已经设置为 SSH 格式。
+
+首先，检查一下远程仓库设置：
+
+```bash
+git remote -v
+```
+
+这个命令会显示你的远程仓库的详细信息。如果显示的 URL 是以 `https://` 开头的，那么将其更改为 SSH 格式。
+
+更改为 SSH，可以使用以下命令：
+
+```bash
+git remote set-url origin git@github.com:Liam-Xander/仓库名.git
+```
+
+请将 `仓库名` 替换为你的 GitHub 仓库名称。
+
+完成这些之后，尝试再次使用 SSH 方式推送你的更改：
+
+```bash
+git push -u origin main
+```
+
+这样，Git 会通过 SSH 进行推送，之前设置的 SSH 密钥进行身份验证。
+然后按照之前的步骤就行，一般到这就行！！！！！
+----------------------------------------------------
 
 如果ping成功了，但是还是卡住
 尝试先压缩
