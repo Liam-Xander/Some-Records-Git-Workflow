@@ -161,6 +161,10 @@ git remote -v
 ```bash
 git remote set-url origin git@github.com:Liam-Xander/仓库名.git
 ```
+如果还没有：
+```bash
+git remote add origin git@github.com:Liam-Xander/Terrain_Car_TRO.git
+```
 
 请将 `仓库名` 替换为你的 GitHub 仓库名称。
 
