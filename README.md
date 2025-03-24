@@ -161,11 +161,27 @@ git remote -v
 ```bash
 git remote set-url origin git@github.com:Liam-Xander/仓库名.git
 ```
+---------------------------------------------------------------
 如果还没有：
 ```bash
 git remote add origin git@github.com:Liam-Xander/Terrain_Car_TRO.git
 ```
 
+```bash
+nhy@LAPTOP-C24LBKAL:~/fast_ackermann_new/src$ git branch
+nhy@LAPTOP-C24LBKAL:~/fast_ackermann_new/src$ git checkout -b main3
+Switched to a new branch 'main3'
+nhy@LAPTOP-C24LBKAL:~/fast_ackermann_new/src$ git push -u origin main3
+error: src refspec main3 does not match any
+error: failed to push some refs to 'git@github.com:Liam-Xander/Terrain_Car_TRO.git'
+```
+
+```bash
+git add .
+git commit -m "Initial commit"    # 创建一个提交
+```
+
+--------------------------------------------------------------=
 请将 `仓库名` 替换为你的 GitHub 仓库名称。
 
 完成这些之后，尝试再次使用 SSH 方式推送你的更改：
