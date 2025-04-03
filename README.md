@@ -168,6 +168,17 @@ git remote add origin git@github.com:Liam-Xander/Terrain_Car_TRO.git
 ```
 
 ```bash
+nhy@LAPTOP-C24LBKAL:~/fast_ackermann_new/src$ git remote set-url origin git@github.com:Liam-Xander/Terrain_Car_TRO.git
+fatal: not a git repository (or any of the parent directories): .git
+nhy@LAPTOP-C24LBKAL:~/fast_ackermann_new/src$ git remote add origin git@github.com:Liam-Xander/Terrain_Car_TRO.git
+fatal: not a git repository (or any of the parent directories): .git
+nhy@LAPTOP-C24LBKAL:~/fast_ackermann_new/src$ git init
+Initialized empty Git repository in /home/nhy/fast_ackermann_new/src/.git/
+nhy@LAPTOP-C24LBKAL:~/fast_ackermann_new/src$ git remote add origin git@github.com:Liam-Xander/Terrain_Car_TRO.git
+nhy@LAPTOP-C24LBKAL:~/fast_ackermann_new/src$
+```
+
+```bash
 nhy@LAPTOP-C24LBKAL:~/fast_ackermann_new/src$ git branch
 nhy@LAPTOP-C24LBKAL:~/fast_ackermann_new/src$ git checkout -b main3
 Switched to a new branch 'main3'
