@@ -108,6 +108,58 @@ remote: Total 13 (delta 6), reused 0 (delta 0), pack-reused 0 (from 0)
 
 ```
 
+---------------------------------------
+
+```
+nhy@LAPTOP-C24LBKAL:~/ackermann_fast_planner_real/src$ git push origin mian6
+To github.com:Liam-Xander/Terrain_Car_TRO.git
+ ! [rejected]        mian6 -> mian6 (non-fast-forward)
+error: failed to push some refs to 'git@github.com:Liam-Xander/Terrain_Car_TRO.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+nhy@LAPTOP-C24LBKAL:~/ackermann_fast_planner_real/src$ git status
+On branch mian6
+nothing to commit, working tree clean
+nhy@LAPTOP-C24LBKAL:~/ackermann_fast_planner_real/src$ git pull origin mian6
+From github.com:Liam-Xander/Terrain_Car_TRO
+ * branch            mian6      -> FETCH_HEAD
+Merge made by the 'recursive' strategy.
+ fast-planner/src/fast_planner/plan_env/Methods.md | 5 ++---
+ 1 file changed, 2 insertions(+), 3 deletions(-)
+nhy@LAPTOP-C24LBKAL:~/ackermann_fast_planner_real/src$ git push origin mian6
+Enumerating objects: 52, done.
+Counting objects: 100% (42/42), done.
+Delta compression using up to 32 threads
+Compressing objects: 100% (19/19), done.
+Writing objects: 100% (22/22), 5.17 KiB | 1.29 MiB/s, done.
+Total 22 (delta 17), reused 0 (delta 0)
+remote: Resolving deltas: 100% (17/17), completed with 13 local objects.
+To github.com:Liam-Xander/Terrain_Car_TRO.git
+   2201d88..a5847e8  mian6 -> mian6
+nhy@LAPTOP-C24LBKAL:~/ackermann_fast_planner_real/src$ git branch --set-upstream-to=origin/mian6 mian6
+Branch 'mian6' set up to track remote branch 'mian6' from 'origin'.
+
+
+git branch --set-upstream-to=origin/mian6 mian6
+
+这样设置后，以后直接使用`git pull`和`git push`命令而无需指定远程和分支名称，Git会自动处理与正确远程分支的同步。
+
+
+
+nhy@LAPTOP-C24LBKAL:~/ackermann_fast_planner_real/src$ git tag -a 0428afternoon -m "添加了高程梯度可视化及计算"
+nhy@LAPTOP-C24LBKAL:~/ackermann_fast_planner_real/src$ git push origin 0428afternoon
+Enumerating objects: 1, done.
+Counting objects: 100% (1/1), done.
+Writing objects: 100% (1/1), 215 bytes | 215.00 KiB/s, done.
+Total 1 (delta 0), reused 0 (delta 0)
+To github.com:Liam-Xander/Terrain_Car_TRO.git
+ * [new tag]         0428afternoon -> 0428afternoon
+nhy@LAPTOP-C24LBKAL:~/ackermann_fast_planner_real/src$
+```
+
+---------------------------------------
 
 ---------------------------------------
 ## 解决wsl2中无法上传github的问题
