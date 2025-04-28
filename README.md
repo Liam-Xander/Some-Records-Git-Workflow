@@ -110,7 +110,7 @@ remote: Total 13 (delta 6), reused 0 (delta 0), pack-reused 0 (from 0)
 
 ---------------------------------------
 
-```
+```bash
 nhy@LAPTOP-C24LBKAL:~/ackermann_fast_planner_real/src$ git push origin mian6
 To github.com:Liam-Xander/Terrain_Car_TRO.git
  ! [rejected]        mian6 -> mian6 (non-fast-forward)
