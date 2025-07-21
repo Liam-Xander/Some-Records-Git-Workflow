@@ -2,6 +2,59 @@
 
 ---
 
+
+# 删除旧的版本库信息，之后重新提交仓库
+使用 Remove-Item
+
+```powershell
+# 进入你的项目目录
+cd D:\学术网页\Xingyu-Li.github.io-main
+
+# 删除 .git 文件夹及其所有内容
+Remove-Item .git -Recurse -Force
+```
+
+* `-Recurse` 会递归删除子目录和文件
+* `-Force` 会强制删除只读文件
+
+删除完成后，再运行 `git status` 或 `dir /a`，确认 `.git` 已经不在目录里。然后就可以按之前的步骤重新 `git init`、`git add .`、`git commit` 并把新的 `origin` 推送到 GitHub。
+
+
+把本地的 `.git` 目录删掉了，也在 GitHub 上重新建好了同名空仓库，接下来按下面步骤从头初始化并推送：
+
+```powershell
+cd D:\学术网页\Xingyu-Li.github.io-main
+
+# 1. 初始化一个新的 Git 仓库
+git init
+
+# 2. 添加所有文件到暂存区
+git add .
+
+# 3. 提交
+git commit -m "Initial commit by Xingyu Li"
+
+# 4. 添加远程 origin（指向你新建的 GitHub 仓库）
+git remote add origin https://github.com/Liam-Xander/XingyuLi.github.io.git
+
+# 5. 确保你的主分支叫 main，如果不是可以重命名
+git branch -M main
+
+# 6. 推送到 GitHub，并设置上游分支
+git push -u origin main
+```
+
+执行完后，再跑一次：
+
+```bash
+git remote -v
+```
+
+应该会看到 `origin` 指向你的 GitHub 仓库；网页端刷新，也能看到项目文件和提交历史。
+
+-------------------------------------------------------------------------------------------------------------
+
+
 # 上传不同版本的 Git 工作流程
 
 ## 提交和推送最新代码，并创建标签
