@@ -1,6 +1,96 @@
 # Some-Records
 
 ---
+```bash
+(base) lxyu@lxyu-Inspiron-7501:~/GeoSafe_ws/src/GeoSafe-Flight$ git push -u origin main_main
+git@github.com: Permission denied (publickey).
+fatal: 无法读取远程仓库。
+
+请确认您有正确的访问权限并且仓库存在。
+(base) lxyu@lxyu-Inspiron-7501:~/GeoSafe_ws/src/GeoSafe-Flight$ ^C
+(base) lxyu@lxyu-Inspiron-7501:~/GeoSafe_ws/src/GeoSafe-Flight$ ls -al ~/.ssh
+总用量 20
+drwx------   2 lxyu lxyu 4096 Sep 25  2024 .
+drwxr-xr-x 120 lxyu lxyu 4096 Aug  8 17:24 ..
+-rw-------   1 lxyu lxyu 1679 Sep 25  2024 id_rsa
+-rw-r--r--   1 lxyu lxyu  399 Sep 25  2024 id_rsa.pub
+-rw-r--r--   1 lxyu lxyu  666 Jan  3  2025 known_hosts
+(base) lxyu@lxyu-Inspiron-7501:~/GeoSafe_ws/src/GeoSafe-Flight$ ^C
+(base) lxyu@lxyu-Inspiron-7501:~/GeoSafe_ws/src/GeoSafe-Flight$ cat ~/.ssh/id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDQFuQ3dPLCeVLxdel5Dq7G6y3A+uS54rsZuFj7iePWvzI7jajHzGd8QMGnv33uUmH17lugI8vy1qn/kjKW+tsSXlMx2uM26xW3ZqaPX22bY7AF5TjNgQn/uXqTARygUBNjGUT+Uc/GMLcpYFtiWGW1Z9U5BuEkaqYRJxGX5hLhZxGj5Jw2kjnrFyu0gh5eVMXjTzdbPlSk6GGPmFJmE2JVMzkSvnpVUqw9Pi/gxxDdrOxo0R3HVjNla8bwz+hTyxM+z0fzdTzzXlAyGh/71T7YY8IUtiyabGByfJCzAqluCt+7O8GNc/50CExf6NY0QJadCfIamf4nwUMYq78VGRwd 2432485055@qq.com
+(base) lxyu@lxyu-Inspiron-7501:~/GeoSafe_ws/src/GeoSafe-Flight$ ^C
+(base) lxyu@lxyu-Inspiron-7501:~/GeoSafe_ws/src/GeoSafe-Flight$ ^C
+(base) lxyu@lxyu-Inspiron-7501:~/GeoSafe_ws/src/GeoSafe-Flight$ ssh -T git@github.com
+Hi Liam-Xander! You've successfully authenticated, but GitHub does not provide shell access.
+(base) lxyu@lxyu-Inspiron-7501:~/GeoSafe_ws/src/GeoSafe-Flight$ git checkout main_main
+已经位于 'main_main'
+(base) lxyu@lxyu-Inspiron-7501:~/GeoSafe_ws/src/GeoSafe-Flight$ git push
+fatal: 当前分支 main_main 没有对应的上游分支。
+为推送当前分支并建立与远程上游的跟踪，使用
+
+    git push --set-upstream origin main_main
+
+(base) lxyu@lxyu-Inspiron-7501:~/GeoSafe_ws/src/GeoSafe-Flight$ ^C
+(base) lxyu@lxyu-Inspiron-7501:~/GeoSafe_ws/src/GeoSafe-Flight$ git push --set-upstream origin main_main
+对象计数中: 5, 完成.
+Delta compression using up to 12 threads.
+压缩对象中: 100% (4/4), 完成.
+写入对象中: 100% (5/5), 485 bytes | 485.00 KiB/s, 完成.
+Total 5 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+remote: 
+remote: Create a pull request for 'main_main' on GitHub by visiting:
+remote:      https://github.com/Liam-Xander/GeoSafe-Flight/pull/new/main_main
+remote: 
+To github.com:Liam-Xander/GeoSafe-Flight.git
+ * [new branch]      main_main -> main_main
+分支 'main_main' 设置为跟踪来自 'origin' 的远程分支 'main_main'。
+```
+
+恭喜！您已经成功地将 `main_main` 分支上的代码推送到了 GitHub。
+
+输出信息 `* [new branch] main_main -> main_main` 明确表示您在远程仓库中创建了一个名为 `main_main` 的新分支。
+
+现在，您在 GitHub 上的仓库有两个主要分支：
+1.  `main` (可能是您最初的主分支)
+2.  `main_main` (您刚刚推送上去的分支)
+
+**现在的目标是，把您在 `main_main` 分支上的更改，合并到项目的主分支 `main` 中去。** 这在 GitHub 上通常通过一个叫做“**Pull Request**”的操作来完成。
+
+---
+### **接下来的步骤：合并分支**
+
+请按照以下步骤操作，这会使您的仓库代码同步并保持整洁。
+
+#### **1. 前往 GitHub 创建 Pull Request**
+-   打开您的浏览器，访问您的 GitHub 仓库：[https://github.com/Liam-Xander/GeoSafe-Flight](https://github.com/Liam-Xander/GeoSafe-Flight)
+-   您应该会看到一个黄色的提示条，上面写着 "`main_main` had recent pushes"，旁边会有一个绿色的 **"Compare & pull request"** 按钮。请点击这个按钮。
+
+
+
+#### **2. 确认合并方向**
+-   在打开的页面中，请确保合并的方向是正确的：
+    -   `base: main`  <--  `compare: main_main`
+-   这意味着您请求将 `main_main` 分支的更改，合并到 `main` 分支里。
+-   您可以给这个 Pull Request 起一个标题（例如 “Merge working branch into main”），然后点击 **"Create pull request"**。
+
+#### **3. 执行合并**
+-   创建后，页面会跳转到这个 Pull Request 的详情页。
+-   您会看到一个绿色的 **"Merge pull request"** 按钮。请点击它，并再次确认合并。
+
+#### **4. (推荐) 删除已合并的分支**
+-   成功合并后，`main_main` 分支的任务就完成了。GitHub 会显示一个 **"Delete branch"** 的按钮。
+-   点击它来删除远程的 `main_main` 分支，这样可以让您的仓库只保留 `main` 这一个主分支，保持整洁。
+
+---
+完成这些步骤后，您所有的代码就都安全地合并到主分支 `main` 里了。以后您再进行开发时，建议直接在 `main` 分支上操作，或者为新功能创建有意义名称的分支。
+
+
+
+
+
+
+
 
 
 # 删除旧的版本库信息，之后重新提交仓库
