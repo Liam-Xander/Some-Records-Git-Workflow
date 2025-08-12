@@ -251,6 +251,57 @@ remote: Total 13 (delta 6), reused 0 (delta 0), pack-reused 0 (from 0)
 
 ```
 
+#### 如果rebase不管用就按照这个：
+```bash
+lxyu@LiamXander:~/rmm_fuel_0.1/src/RMM-FUEL-predictfuel1.3$ git push origin main
+Username for 'https://github.com': Liam Xander
+Password for 'https://Liam Xander@github.com':
+To https://github.com/Liam-Xander/RMM-UAV-Exploration-prep.git
+ ! [rejected]        main -> main (non-fast-forward)
+error: failed to push some refs to 'https://github.com/Liam-Xander/RMM-UAV-Exploration-prep.git'
+hint: Updates were rejected because the tip of your current branch is behind
+hint: its remote counterpart. Integrate the remote changes (e.g.
+hint: 'git pull ...') before pushing again.
+hint: See the 'Note about fast-forwards' in 'git push --help' for details.
+lxyu@LiamXander:~/rmm_fuel_0.1/src/RMM-FUEL-predictfuel1.3$ git pull --rebase
+Username for 'https://github.com': Liam Xander
+Password for 'https://Liam Xander@github.com':
+There is no tracking information for the current branch.
+Please specify which branch you want to rebase against.
+See git-pull(1) for details.
+
+    git pull <remote> <branch>
+
+If you wish to set tracking information for this branch you can do so with:
+
+    git branch --set-upstream-to=origin/<branch> main
+
+lxyu@LiamXander:~/rmm_fuel_0.1/src/RMM-FUEL-predictfuel1.3$ ^C
+lxyu@LiamXander:~/rmm_fuel_0.1/src/RMM-FUEL-predictfuel1.3$ git push --force-with-lease origin main
+Username for 'https://github.com': Liam Xander
+Password for 'https://Liam Xander@github.com':
+Enumerating objects: 1533, done.
+Counting objects: 100% (1533/1533), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (1417/1417), done.
+Writing objects: 100% (1533/1533), 69.98 MiB | 5.48 MiB/s, done.
+Total 1533 (delta 480), reused 47 (delta 19)
+remote: Resolving deltas: 100% (480/480), done.
+To https://github.com/Liam-Xander/RMM-UAV-Exploration-prep.git
+ + cce556d...ed16c73 main -> main (forced update)
+lxyu@LiamXander:~/rmm_fuel_0.1/src/RMM-FUEL-predictfuel1.3$ git tag -a v2.0 -m "resolution 0.1"
+lxyu@LiamXander:~/rmm_fuel_0.1/src/RMM-FUEL-predictfuel1.3$ git push origin v2.0
+Username for 'https://github.com': Liam Xander
+Password for 'https://Liam Xander@github.com':
+Enumerating objects: 1, done.
+Counting objects: 100% (1/1), done.
+Writing objects: 100% (1/1), 165 bytes | 165.00 KiB/s, done.
+Total 1 (delta 0), reused 0 (delta 0)
+To https://github.com/Liam-Xander/RMM-UAV-Exploration-prep.git
+ * [new tag]         v2.0 -> v2.0
+lxyu@LiamXander:~/rmm_fuel_0.1/src/RMM-FUEL-predictfuel1.3$
+```
+
 ---------------------------------------
 
 ```bash
